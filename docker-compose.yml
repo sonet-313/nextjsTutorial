@@ -1,0 +1,13 @@
+version: "3"
+services:
+  node:
+    image: "node:17"
+    tty: true
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./app/react-basic:/home/node/app
+    ports:
+      - "3000:3000"
